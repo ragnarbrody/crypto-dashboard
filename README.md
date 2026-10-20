@@ -58,30 +58,29 @@ crypto-dashboard/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/crypto-dashboard.git
+   git clone https://github.com/ragnarbrody/crypto-dashboard.git
    cd crypto-dashboard
 
 2. Crie e ative o ambiente virtual:
     ```text
     python -m venv venv
+
     # Windows
     venv\Scripts\activate
+
     # Mac/Linux
     source venv/bin/activate
 
 3. Instale as dependências:
     ```text
     pip install -r requirements.txt
-
 4. Configure a chave da API:
     ```text
     Crie o arquivo .streamlit/secrets.toml:
         COINGECKO_API_KEY = "sua_chave_aqui"
-
 5. Rode o app:
     ```text
     streamlit run app.py
-
 ## 🔐 Segurança
 
 A chave da API não é versionada. O arquivo .streamlit/secrets.toml está no .gitignore. No deploy, a chave é configurada diretamente no painel do Streamlit Community Cloud.
