@@ -4,7 +4,7 @@ Dashboard interativo para acompanhar preços, volume e performance de criptomoed
 
 🔗 **Demo ao vivo:** [https://meu-app.streamlit.app](https://seu-app.streamlit.app)
 
-![Print do dashboard](print.jpeg)
+![Print do dashboard](docs/print.jpeg)
 
 ## 🎯 O que o projeto faz
 
