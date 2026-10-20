@@ -2,7 +2,7 @@
 
 Dashboard interativo para acompanhar preços, volume e performance de criptomoedas, construído com Python e Streamlit.
 
-🔗 **Demo ao vivo:** [https://meu-app.streamlit.app](https://seu-app.streamlit.app)
+🔗 **Demo ao vivo:** [https://crypto-dashboard-lucaspais.streamlit.app](https://crypto-dashboard-lucaspais.streamlit.app)
 
 ![Print do dashboard](docs/print.jpeg)
 
