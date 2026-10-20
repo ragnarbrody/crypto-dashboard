@@ -1,59 +1,59 @@
-# ?? Crypto Dashboard
+# ğŸ“ˆ Crypto Dashboard
 
-Dashboard interativo para acompanhar preços, volume e performance de criptomoedas, construído com Python e Streamlit.
+Dashboard interativo para acompanhar preÃ§os, volume e performance de criptomoedas, construÃ­do com Python e Streamlit.
 
-?? **Demo ao vivo:** [https://seu-app.streamlit.app](https://seu-app.streamlit.app) *(substitua após o deploy)*
+ğŸ”— **Demo ao vivo:** [https://meu-app.streamlit.app](https://seu-app.streamlit.app)
 
-![Print do dashboard](docs/print.png) *(adicione um print ou gif depois)*
+![Print do dashboard](print.jpeg)
 
-## ?? O que o projeto faz
+## ğŸ¯ O que o projeto faz
 
-- Consulta preços históricos e volume de negociação via API pública CoinGecko
-- Exibe métricas do período: preço atual, variação, máxima e mínima
-- Permite alternar a moeda de exibição entre Dólar, Euro e Real
-- Compara a performance de múltiplas criptomoedas usando **base 100** (normalização)
-- Oferece tooltip detalhado com performance relativa e preço original
+- Consulta preÃ§os histÃ³ricos e volume de negociaÃ§Ã£o via API pÃºblica CoinGecko
+- Exibe mÃ©tricas do perÃ­odo: preÃ§o atual, variaÃ§Ã£o, mÃ¡xima e mÃ­nima
+- Permite alternar a moeda de exibiÃ§Ã£o entre DÃ³lar, Euro e Real
+- Compara a performance de mÃºltiplas criptomoedas usando **base 100** (normalizaÃ§Ã£o)
+- Oferece tooltip detalhado com performance relativa e preÃ§o original
 - Exporta os dados exibidos em CSV
 
-## ?? Decisões técnicas
+## ğŸ§  DecisÃµes tÃ©cnicas
 
-**Por que normalizar em base 100 na comparação?**
-Comparar valores absolutos de BTC (milhares) com DOGE (centavos) torna o gráfico inútil. A normalização faz cada moeda começar em 100, permitindo comparar **performance relativa** de forma justa ? a mesma métrica usada pelo mercado.
+**Por que normalizar em base 100 na comparaÃ§Ã£o?**
+Comparar valores absolutos de BTC (milhares) com DOGE (centavos) torna o grÃ¡fico inÃºtil. A normalizaÃ§Ã£o faz cada moeda comeÃ§ar em 100, permitindo comparar **performance relativa** de forma justa â€” a mesma mÃ©trica usada pelo mercado.
 
 **Por que `@st.cache_data(ttl=400)`?**
-A API do CoinGecko tem limite de requisições (429). O cache evita chamadas repetidas para a mesma combinação de moeda/periodo/moeda de exibição, melhorando performance e respeitando o rate limit.
+A API do CoinGecko tem limite de requisiÃ§Ãµes (429). O cache evita chamadas repetidas para a mesma combinaÃ§Ã£o de moeda/periodo/moeda de exibiÃ§Ã£o, melhorando performance e respeitando o rate limit.
 
 **Por que cores fixas por moeda?**
-Cada criptomoeda tem uma cor estável (Bitcoin laranja, Ethereum azul, etc.), mantendo consistência visual entre os gráficos e evitando que a cor mude a cada interação do usuário.
+Cada criptomoeda tem uma cor estÃ¡vel (Bitcoin laranja, Ethereum azul, etc.), mantendo consistÃªncia visual entre os grÃ¡ficos e evitando que a cor mude a cada interaÃ§Ã£o do usuÃ¡rio.
 
 **Tratamento do erro 429**
-Quando o limite é atingido, o app mostra uma mensagem amigável com opção de tentar novamente, em vez de um erro cru.
+Quando o limite Ã© atingido, o app mostra uma mensagem amigÃ¡vel com opÃ§Ã£o de tentar novamente, em vez de um erro cru.
 
-## ??? Stack
+## ğŸ› ï¸ Stack
 
 - **Python 3.12+**
-- **Streamlit** ? interface web
-- **Pandas** ? manipulação de dados
-- **Plotly** ? gráficos interativos
-- **Requests** ? consumo da API CoinGecko
+- **Streamlit** â€” interface web
+- **Pandas** â€” manipulaÃ§Ã£o de dados
+- **Plotly** â€” grÃ¡ficos interativos
+- **Requests** â€” consumo da API CoinGecko
 
-## ?? Estrutura do projeto
+## ğŸ“ Estrutura do projeto
 crypto-dashboard/
-??? app.py # Orquestração da interface
-??? src/
-? ??? api.py # Funções de acesso à API
-? ??? config.py # Moedas, exibição e paleta
-? ??? cores.py # Cor estável por moeda
-? ??? transformacoes.py # Normalização base 100
-??? requirements.txt
-??? .gitignore
-??? README.md
+â”œâ”€â”€ app.py # OrquestraÃ§Ã£o da interface
+â”œâ”€â”€ src/
+â”‚ â”œâ”€â”€ api.py # FunÃ§Ãµes de acesso Ã  API
+â”‚ â”œâ”€â”€ config.py # Moedas, exibiÃ§Ã£o e paleta
+â”‚ â”œâ”€â”€ cores.py # Cor estÃ¡vel por moeda
+â”‚ â””â”€â”€ transformacoes.py # NormalizaÃ§Ã£o base 100
+â”œâ”€â”€ requirements.txt
+â”œâ”€â”€ .gitignore
+â””â”€â”€ README.md
 
-## ?? Como rodar localmente
+## ğŸš€ Como rodar localmente
 
-**Pré-requisitos:** Python 3.12+ e uma chave gratuita da [Demo API do CoinGecko](https://www.coingecko.com/en/developers/dashboard).
+**PrÃ©-requisitos:** Python 3.12+ e uma chave gratuita da [Demo API do CoinGecko](https://www.coingecko.com/en/developers/dashboard).
 
-1. Clone o repositório:
+1. Clone o repositÃ³rio:
    ```bash
    git clone https://github.com/seu-usuario/crypto-dashboard.git
    cd crypto-dashboard
@@ -65,7 +65,7 @@ crypto-dashboard/
     # Mac/Linux
     source venv/bin/activate
 
-3. Instale as dependências:
+3. Instale as dependÃªncias:
     pip install -r requirements.txt
 
 4. Configure a chave da API:
@@ -75,10 +75,10 @@ crypto-dashboard/
 5. Rode o app:
     streamlit run app.py
 
-## ?? Segurança
+## ğŸ” SeguranÃ§a
 
-A chave da API não é versionada. O arquivo .streamlit/secrets.toml está no .gitignore. No deploy, a chave é configurada diretamente no painel do Streamlit Community Cloud.
+A chave da API nÃ£o Ã© versionada. O arquivo .streamlit/secrets.toml estÃ¡ no .gitignore. No deploy, a chave Ã© configurada diretamente no painel do Streamlit Community Cloud.
 
-## ?? Licença
+## ğŸ“„ LicenÃ§a
 
-Este projeto está sob a licença MIT.
+Este projeto estÃ¡ sob a licenÃ§a MIT.
