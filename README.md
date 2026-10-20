@@ -38,6 +38,8 @@ Quando o limite é atingido, o app mostra uma mensagem amigável com opção de 
 - **Requests** — consumo da API CoinGecko
 
 ## 📁 Estrutura do projeto
+
+```
 crypto-dashboard/
 ├── app.py # Orquestração da interface
 ├── src/
@@ -48,6 +50,7 @@ crypto-dashboard/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
 
 ## 🚀 Como rodar localmente
 
